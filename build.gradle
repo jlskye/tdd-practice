@@ -4,10 +4,22 @@ plugins {
     id 'java'
 }
 
+bootJar {
+    enabled = false
+}
+
 allprojects {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
+
+    repositories {
+        mavenCentral()
+    }
+
+    jar {
+        enabled = false
+    }
 
     group = 'com.tdd.learn'
     sourceCompatibility = JavaVersion.VERSION_11
@@ -15,8 +27,8 @@ allprojects {
 }
 
 subprojects {
-    repositories {
-        mavenCentral()
+    bootJar {
+        archiveAppendix = "realm"
     }
 
     dependencyManagement {

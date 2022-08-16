@@ -1,5 +1,4 @@
 rootProject.name = 'tdd-learn-demo'
 include 'tdd-registration'
-include 'tdd-verification'
 include 'tdd-card-user'
 
