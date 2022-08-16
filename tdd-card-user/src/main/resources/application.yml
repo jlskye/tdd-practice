@@ -1,0 +1,24 @@
+server:
+  port: 8082
+  ssl:
+    enabled: false
+
+spring:
+  application:
+    name: tdd-card-user
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+logging:
+  level.root: info
+  log-to-console: true
