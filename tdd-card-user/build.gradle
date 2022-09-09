@@ -28,6 +28,7 @@ dependencies {
     testImplementation 'io.rest-assured:spring-mock-mvc'
     testImplementation 'org.junit.platform:junit-platform-runner'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.7.3'
+    implementation 'org.flywaydb:flyway-core'
 }
 
 test {
