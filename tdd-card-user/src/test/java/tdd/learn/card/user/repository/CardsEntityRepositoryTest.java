@@ -26,6 +26,6 @@ class CardsEntityRepositoryTest extends AbstractIntegrationTest{
     void should_retrieve_card_by_id() {
         Long id = 1L;
         Card card = cardsEntityRepository.getCardsById(id);
-        Assertions.assertThat(card).isEqualTo(card);
+        Assertions.assertThat(card.getCardStatus()).isEqualTo("00");
     }
 }

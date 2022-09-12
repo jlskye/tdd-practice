@@ -12,6 +12,4 @@ public class CardsRepository {
     public Card getCardById(Long cardNo) {
         return cardsEntityRepository.getCardsById(cardNo);
     }
-
-    public void deleteALl() { cardsEntityRepository.deleteAll();}
 }
