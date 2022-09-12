@@ -12,4 +12,6 @@ public class AuditRepository {
     public Audit getAuditById(Long id) {
         return auditEntityRepository.getAuditById(id);
     }
+
+    public Audit updateAuditById(Audit audit) { return auditEntityRepository.save(audit); }
 }

@@ -12,4 +12,7 @@ public class CardsRepository {
     public Card getCardById(Long cardNo) {
         return cardsEntityRepository.getCardsById(cardNo);
     }
+    public Card updateCard(Card card) {
+        return cardsEntityRepository.save(card);
+    }
 }
