@@ -31,9 +31,9 @@ dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.7.3'
     implementation 'org.flywaydb:flyway-core'
 
-    testImplementation 'org.testcontainers:testcontainers:1.17.3'
-    testImplementation 'org.testcontainers:postgresql:1.17.3'
-    testImplementation 'org.testcontainers:junit-jupiter:1.17.3'
+    testImplementation "org.testcontainers:testcontainers:1.16.2"
+    testImplementation 'org.testcontainers:postgresql:1.16.0'
+    testImplementation "org.testcontainers:junit-jupiter:1.16.2"
 }
 
 test {
