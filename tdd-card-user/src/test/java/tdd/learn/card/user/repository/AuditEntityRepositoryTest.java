@@ -14,7 +14,7 @@ class AuditEntityRepositoryTest extends AbstractIntegrationTest {
 
     @BeforeEach
     void setUp() {
-        Audit audit = new Audit(1L, 1);
+        Audit audit = new Audit("152110", 1);
         auditEntityRepository.save(audit);
     }
 
@@ -25,7 +25,7 @@ class AuditEntityRepositoryTest extends AbstractIntegrationTest {
 
     @Test
     void should_retrieve_audit_by_id() {
-        Audit audit = auditEntityRepository.getAuditById(1L);
+        Audit audit = auditEntityRepository.getAuditById("152110");
         assertThat(audit.getErrorTime()).isEqualTo(1);
     }
 }

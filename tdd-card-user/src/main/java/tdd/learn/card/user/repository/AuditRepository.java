@@ -9,7 +9,7 @@ import tdd.learn.card.user.entity.Audit;
 public class AuditRepository {
     private AuditEntityRepository auditEntityRepository;
 
-    public Audit getAuditById(Long id) {
+    public Audit getAuditById(String id) {
         return auditEntityRepository.getAuditById(id);
     }
 

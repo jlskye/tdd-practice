@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import tdd.learn.card.user.entity.Card;
 
 @Repository
-public interface CardsEntityRepository extends JpaRepository<Card, Long> {
-    Card getCardsById(Long id);
+public interface CardsEntityRepository extends JpaRepository<Card, String> {
+    Card getCardsById(String id);
 }

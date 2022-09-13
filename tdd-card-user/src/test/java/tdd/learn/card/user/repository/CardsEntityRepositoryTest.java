@@ -13,7 +13,7 @@ class CardsEntityRepositoryTest extends AbstractIntegrationTest{
 
     @BeforeEach
     void setUp() {
-        Card card = new Card(1L, "111111", "00");
+        Card card = new Card("152110", "111111", "00");
         this.cardsEntityRepository.save(card);
     }
 
@@ -24,7 +24,7 @@ class CardsEntityRepositoryTest extends AbstractIntegrationTest{
 
     @Test
     void should_retrieve_card_by_id() {
-        Long id = 1L;
+        String id = "152110";
         Card card = cardsEntityRepository.getCardsById(id);
         Assertions.assertThat(card.getCardStatus()).isEqualTo("00");
     }

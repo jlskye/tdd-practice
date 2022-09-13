@@ -9,7 +9,7 @@ import tdd.learn.card.user.entity.Card;
 public class CardsRepository {
     private CardsEntityRepository cardsEntityRepository;
 
-    public Card getCardById(Long cardNo) {
+    public Card getCardById(String cardNo) {
         return cardsEntityRepository.getCardsById(cardNo);
     }
     public Card saveCard(Card card) {

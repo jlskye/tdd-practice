@@ -13,6 +13,6 @@ import javax.persistence.*;
 @Table(name = "audit")
 public class Audit {
     @Id
-    private Long id;
+    private String id;
     private int errorTime;
 }

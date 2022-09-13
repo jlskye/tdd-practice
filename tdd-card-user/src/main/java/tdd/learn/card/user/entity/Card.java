@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "cards")
 public class Card {
     @Id
-    private Long id;
+    private String id;
     private String pin;
     private String cardStatus;
 }
