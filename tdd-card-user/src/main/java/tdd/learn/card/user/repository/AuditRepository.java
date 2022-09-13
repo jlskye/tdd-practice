@@ -13,5 +13,9 @@ public class AuditRepository {
         return auditEntityRepository.getAuditById(id);
     }
 
-    public Audit updateAuditById(Audit audit) { return auditEntityRepository.save(audit); }
+    public Audit saveAudit(Audit audit) { return auditEntityRepository.save(audit); }
+
+    public void deleteAll() {
+        auditEntityRepository.deleteAll();
+    }
 }

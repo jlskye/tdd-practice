@@ -12,7 +12,11 @@ public class CardsRepository {
     public Card getCardById(Long cardNo) {
         return cardsEntityRepository.getCardsById(cardNo);
     }
-    public Card updateCard(Card card) {
+    public Card saveCard(Card card) {
         return cardsEntityRepository.save(card);
+    }
+
+    public void deleteAll() {
+        cardsEntityRepository.deleteAll();
     }
 }
