@@ -1,4 +1,4 @@
-package tdd.learn.card.user.service;
+package tdd.learn.card.user.enums;
 
 import java.util.stream.Stream;
 
@@ -8,8 +8,8 @@ public enum CardStatusEnum {
     INVALID(2, "01"),
     INACTIVE(3, "02"),
     LOCKED(4, "03");
-    Integer type;
-    String description;
+    public Integer type;
+    public String description;
 
     CardStatusEnum(Integer type, String description) {
         this.type = type;
