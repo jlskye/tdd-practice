@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CardDto {
+public class Card {
     private String id;
     private String pin;
     private String cardStatus;

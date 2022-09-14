@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuditDto {
+public class Audit {
     private String id;
     private int errorTime;
 }
