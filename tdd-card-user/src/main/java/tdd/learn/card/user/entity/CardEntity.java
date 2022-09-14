@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "cards")
-public class Card {
+public class CardEntity {
     @Id
     private String id;
     private String pin;

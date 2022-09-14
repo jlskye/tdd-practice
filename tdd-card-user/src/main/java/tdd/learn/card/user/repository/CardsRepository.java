@@ -3,7 +3,7 @@ package tdd.learn.card.user.repository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-import tdd.learn.card.user.entity.Card;
+import tdd.learn.card.user.entity.CardEntity;
 import tdd.learn.card.user.model.CardDto;
 
 @RequiredArgsConstructor
@@ -15,7 +15,7 @@ public class CardsRepository {
     public CardDto getCardById(String cardNo) {
         return mapToDto(cardsEntityRepository.getCardsById(cardNo));
     }
-    public CardDto saveCard(Card card) {
+    public CardDto saveCard(CardEntity card) {
         return mapToDto(cardsEntityRepository.save(card));
     }
 
@@ -23,13 +23,13 @@ public class CardsRepository {
         cardsEntityRepository.deleteAll();
     }
 
-    private CardDto mapToDto(Card card) {
+    private CardDto mapToDto(CardEntity card) {
         CardDto cardDto = mapper.map(card, CardDto.class);
         return cardDto;
     }
 
-    private Card mapToEntity(CardDto cardDto) {
-        Card card = mapper.map(cardDto, Card.class);
+    private CardEntity mapToEntity(CardDto cardDto) {
+        CardEntity card = mapper.map(cardDto, CardEntity.class);
         return card;
     }
 }

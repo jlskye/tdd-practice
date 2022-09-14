@@ -5,7 +5,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import tdd.learn.card.user.entity.Card;
+import tdd.learn.card.user.entity.CardEntity;
 
 class CardsEntityRepositoryTest extends AbstractIntegrationTest{
     @Autowired
@@ -13,7 +13,7 @@ class CardsEntityRepositoryTest extends AbstractIntegrationTest{
 
     @BeforeEach
     void setUp() {
-        Card card = new Card("152110", "111111", "00");
+        CardEntity card = new CardEntity("152110", "111111", "00");
         this.cardsEntityRepository.save(card);
     }
 
@@ -25,7 +25,7 @@ class CardsEntityRepositoryTest extends AbstractIntegrationTest{
     @Test
     void should_retrieve_card_by_id() {
         String id = "152110";
-        Card card = cardsEntityRepository.getCardsById(id);
+        CardEntity card = cardsEntityRepository.getCardsById(id);
         Assertions.assertThat(card.getCardStatus()).isEqualTo("00");
     }
 }
