@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuditDto {
-    private Long id;
+    private String id;
     private int errorTime;
 }
