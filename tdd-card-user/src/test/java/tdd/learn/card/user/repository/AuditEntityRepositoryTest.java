@@ -4,7 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import tdd.learn.card.user.entity.Audit;
+import tdd.learn.card.user.entity.AuditEntity;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -14,7 +14,7 @@ class AuditEntityRepositoryTest extends AbstractIntegrationTest {
 
     @BeforeEach
     void setUp() {
-        Audit audit = new Audit("152110", 1);
+        AuditEntity audit = new AuditEntity("152110", 1);
         auditEntityRepository.save(audit);
     }
 
@@ -25,7 +25,7 @@ class AuditEntityRepositoryTest extends AbstractIntegrationTest {
 
     @Test
     void should_retrieve_audit_by_id() {
-        Audit audit = auditEntityRepository.getAuditById("152110");
+        AuditEntity audit = auditEntityRepository.getAuditById("152110");
         assertThat(audit.getErrorTime()).isEqualTo(1);
     }
 }

@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "audit")
-public class Audit {
+public class AuditEntity {
     @Id
     private String id;
     private int errorTime;

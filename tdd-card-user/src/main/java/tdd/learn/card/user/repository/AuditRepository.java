@@ -2,18 +2,18 @@ package tdd.learn.card.user.repository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import tdd.learn.card.user.entity.Audit;
+import tdd.learn.card.user.entity.AuditEntity;
 
 @RequiredArgsConstructor
 @Component
 public class AuditRepository {
     private AuditEntityRepository auditEntityRepository;
 
-    public Audit getAuditById(String id) {
+    public AuditEntity getAuditById(String id) {
         return auditEntityRepository.getAuditById(id);
     }
 
-    public Audit saveAudit(Audit audit) { return auditEntityRepository.save(audit); }
+    public AuditEntity saveAudit(AuditEntity audit) { return auditEntityRepository.save(audit); }
 
     public void deleteAll() {
         auditEntityRepository.deleteAll();
